@@ -18,21 +18,6 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public List<Event> getAllEvents() {
-
-        Event event = new Event();
-        Author author = new Author();
-        author.setName("Maer");
-        event.addAuthor(author);
-        event.setName("TEst");
-        event.setDateTime(LocalDateTime.now());
-        event.setLocation("xz xyz");
-        event.setDescription("sssssssss");
-        Sity sity = new Sity();
-        sity.setName("WQwq");
-        sity.addEvent(event);
-        eventRepository.save(event);
-
-
         return eventRepository.findAll();
     }
 
